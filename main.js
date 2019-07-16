@@ -1,11 +1,16 @@
-btn5.onclick = ()=>{
-    var originalbtn1 = btn1.innerHTML;
-    btn1.innerHTML = btn4.innerHTML;
-    btn4.innerHTML = btn7.innerHTML;
-    btn7.innerHTML = btn8.innerHTML;
-    btn8.innerHTML = btn9.innerHTML;
-    btn9.innerHTML = btn6.innerHTML;
-    btn6.innerHTML = btn3.innerHTML;
-    btn3.innerHTML = btn2.innerHTML;
-    btn2.innerHTML = originalbtn1;
+var l = "4";
+var a = ["1", "2", "3", "6", "9", "8", "7", "4"];
+var b = ["1", "2", "3", "6", "9", "8", "7", "4"];
+
+var rotate = function() {
+    for (var i = 7; i > 0; i--) {
+        a[i] = a[i - 1];
+    }
+    
+    a[0] = l;
+    l = a[7];
+    
+    for (var i = 0; i < 8; i++) {
+        document.getElementById("btn" + b[i]).innerText = a[i];
+    }
 }

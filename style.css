@@ -1,7 +1,28 @@
-#btns {
+/* Style for the 'buttonContainer' class */
+.btnContainer {
+    width: 75%;
+    margin: 20px auto;
+}
+/* Style for 'buttonClass' elements inside a 'buttonContainer' 
+
+   We can think of the '>' combinator as a sort of binary operator:
+   the syntax 'parent > child' specifies that we're selecting ONLY 
+   elements of type 'child' that are within elements of type 'parent'. 
+*/
+.btnContainer > .btnStyle {
+    width: 30%;
+    height: 48px;
+    font-size: 24px;
+}
+
+
+/*----------------------*/
+
+.buttonContainer {
+    margin: 20px auto;
     width: 75%;
 }
-.btn {
+.buttonContainer > .button {
     width: 30%;
     height: 48px;
     font-size: 24px;
